@@ -1,3 +1,15 @@
+Lexical: GNU Flex 2.5.35
+Syntax: byacc-1.9
+Semantics and code generation: CDK8, RTS2 and extensions
+Assembling: yasm (linux/elf32)
+
+Tested in
+OpenSUSE 12.2, 32 bits
+GCC 4.7.2 20130205
+Perl 5.16.0
+
+-----
+
 Updated package references can be found in Fénix and at the
 this location (usable as a repository):
 
