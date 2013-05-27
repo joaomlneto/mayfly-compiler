@@ -1,0 +1,3 @@
+integer f(integer x, integer y) { x = 5; f = 1 + x + y; }
+public integer mayfly() = 0 { f(3, 4)! }
+

@@ -1,0 +1,8 @@
+integer x = 1;
+public integer mayfly() = 0 {
+  do {
+    x!
+    --x;
+  } while x >= -3;
+}
+

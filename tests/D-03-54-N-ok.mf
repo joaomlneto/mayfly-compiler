@@ -1,0 +1,9 @@
+public integer mayfly() = 0 {
+   if 0 then "KO"!
+   else if 0 then "elif1"!
+   else if 0 then "elif2"!
+   else if 0 then "elif3"!
+   else if 0 then "elif4"!
+   else "OK"!
+}
+

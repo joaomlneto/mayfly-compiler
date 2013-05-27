@@ -1,0 +1,5 @@
+integer g(integer n)
+integer f(string s) { s! f = 10; }
+integer g(integer n) { n! g = 10; }
+public integer mayfly() = 0 { f("ola"); }
+

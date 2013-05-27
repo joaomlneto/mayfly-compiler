@@ -1,0 +1,6 @@
+public integer mayfly() = 0 {
+  integer x;
+  for x in 0 upto 29 do
+    if x % 2 == 0 then x!!
+}
+

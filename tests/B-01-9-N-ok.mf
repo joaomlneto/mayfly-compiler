@@ -1,0 +1,4 @@
+public integer mayfly() = 0 {
+	 1+2! 
+}
+

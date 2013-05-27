@@ -1,0 +1,3 @@
+void f(integer x, integer y) { x + y! }
+public integer mayfly() = 0 { f(3, 4); }
+

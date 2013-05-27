@@ -1,0 +1,7 @@
+>> Leitura e escrita.
+public integer mayfly() = 0 {
+  integer x = 0;
+  x = @;
+  x = x + 12;
+  x!!
+}

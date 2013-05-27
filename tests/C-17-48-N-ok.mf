@@ -1,0 +1,1 @@
+integer x = 10; integer y = 3; integer z = 30; public integer mayfly() = 0 { x==y & (z = 7); z! }

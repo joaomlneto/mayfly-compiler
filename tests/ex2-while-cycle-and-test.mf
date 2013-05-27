@@ -1,0 +1,9 @@
+>> Ciclo de impressão (números pares).
+public integer mayfly() = 0 {
+  integer x = 0;
+  do {
+    if x % 2 == 0 then
+      x!!
+    x++;
+  } while x < 30;
+}

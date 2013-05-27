@@ -1,0 +1,3 @@
+public integer mayfly() = 0 {
+	 3>10! 
+}

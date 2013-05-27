@@ -1,0 +1,56 @@
+Julgamos ter toda a parte lexical e sintáctica correcta, tendo corrigido todos os problemas
+encontrados.
+
+Relativamente à parte semântica, não conseguimos alocar tempo suficiente para corrigir todos
+os problemas identificados, estando estes identificados em baixo.
+
+
+--[Problemas]--
+
+Relativamente à parte semântica e de geração de código, existem alguns problemas que dizem na
+sua maioria respeito a situações pontuais.
+
+O nó de chamada de função não verifica a correcção dos argumentos passados, e, no caso de
+existirem conversões válidas (uma função que aceita um number pode receber um inteiro), não as
+faz.
+
+A passagem de strings como argumentos de funções mais que uma vez não funciona - este caso é
+um dos casos 'pontuais' referidos acima.
+
+As expressões de indexação apenas também funcionam nos seus casos mais simples. Não funcionam
+em todos os casos em que o argumento ponteiro é uma expressão composta.
+
+A validação de tipos, apesar de cobrir todos os casos simples e alguns menos simples, também
+se verifica ser insuficiente. Identificámos alguns casos de incompatibilidade de tipos que não
+é detectada.
+
+Quase todos os casos identificados podem ser encontrados no código com uma anotação de TODO ou
+FIXME no PFwriter ou PFTypeValidator.
+
+
+--[Decisões de Desenho]--
+
+Apenas declaramos as funções externas (print* e read*) caso sejam utilizadas.
+
+Os left-values (nós LeftValue e Indexation) apenas colocam o seu endereço na pilha. Os seus
+nós pai é que ficam encarregues de fazer LOAD ou STORE, consoante a situação. Isto faz com que
+o código gerado seja mais ineficiente (e.g. LOCAL+LOAD em vez de LOCV), e aumente a
+complexidade dos métodos de processamento de todos os outros nós.
+
+Uma alternativa seria a criação de uma pilha de contextos, em que os nós indicariam se
+esperavam que os seus filhos fariam LOAD ou não. Acreditamos que esta situação faria com que o
+código nos outros nós ficasse mais fácil de manter e corrigisse alguns dos problemas
+identificados (como por exemplo a passagem de strings como argumentos de funções mais que uma
+vez).
+
+Para corrigir a situação de inicialização de variáveis globais constantes, era necessário ter
+noção do segmento actual nos métodos de processamento dos literais double e string. Foi criado
+um pequeno wrapper para as funções de mudança de segmentos do Postfix. Este wrapper permite
+verificar qual o segmento actual, e retornar ao segmento anterior (também requerido para
+resolução de alguns outros problemas encontrados).
+
+Estas decisões de desenho talvez tenham levado ao baixo grau de facilidade de manutenção
+apresentado pelo código (PFwriter, principalmente). Contudo, a falta de conhecimento na área
+não nos permitiu identificar potenciais problemas de desenho e levar avante a correcção dos
+problemas remanescente.
+

@@ -1,0 +1,7 @@
+number r = 6.1E1;
+public integer mayfly() = 0 {
+  number *p = 0;
+  p = &r;
+  p[0]!
+}
+

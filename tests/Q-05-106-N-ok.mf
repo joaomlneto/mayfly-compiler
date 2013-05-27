@@ -1,0 +1,6 @@
+number r = 6.1E1;
+public number main(number *p) { main = *p; }
+public integer mayfly() = 0 {
+  main(&r)!
+}
+

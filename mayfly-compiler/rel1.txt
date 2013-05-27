@@ -1,0 +1,57 @@
+Desenvolvimento do Projecto - Entrega intermédia
+
+-- Flex
+As dificuldades apareceram durante a construção dos padrões para reconhecer as
+cadeias de caracteres e números.
+Com alguma experiencia que já tinhamos de anos passados acreditamos ter
+encontrado soluções elegantes.
+Nos padrões referentes às cadeias de caracteres a dificuldade é sempre na
+distinção dos caracteres especiais e na maneira como são introduzidos de novo no
+atributo (string) do token (tLSTRING) a ser passado ao Byacc.
+Quanto aos números uma das dificuldades foi reconhecer erros de formato nos
+números de base octal, por exemplo: 0132934 -> 0132 | 934; com regras mais
+simples iriam ser reconhecidos dois literais inteiros em vez de um erro de
+formatação.
+Para o reconhecimento de strings, tivemos necessidade da utilização de um
+buffer. Considerámos que seria mais limpo e mais simples a utilização directa do
+yylval.s para este efeito.
+
+
+-- Byacc
+Dado sermos ambos repetentes, sabiamos que saiamos da nossa zona de conforto
+durante a construção da gramática. Demos prioridade a esta parte da entrega e
+talvez por ter sido feito com mais tempo conseguimos ultrapassar os conflitos e
+gerar uma gramática processável.
+Encontrámos algumas dificuldades em detectar quais seriam todos os possíveis
+left-values, e qual a precedência de alguns operadores (o qual não conseguimos
+encontrar no enunciado).
+A maior dificuldade foi na criação de nós - os nós da primeira entrega tiveram
+que ser ainda bastante modificados para que fossem compativeis com as regras. As
+principais alterações foram relativamente ao facto de acharmos que o
+identificador de funções e variáveis faria mais sentido que fosse uma string, e
+não um nó Identifier.
+Para uma gramática mais 'limpa', factorizámos ainda a parte da declaração de
+funções e definição de funções. Uma definição de função é semelhante a uma
+declaração, em que a única diferença seria o cabeçalho ser seguido de um bloco.
+Como tal, o construtor de definições de funções aceita uma declaração de função
+e um bloco (e move todos os atributos para ele próprio). Isto permitiu que a
+gramática ficasse um pouco mais limpa. Ainda não considerámos eventuais
+problemas de libertação de memória (dado que a memória para o objecto declaração
+de função não foi libertada).
+Consideramos fazer o mesmo também para declarações de variáveis (e seu valor
+inicial) - com a excepção de apenas se atribuir o valor inicial ao nó já criado.
+
+
+-- XMLWriter
+Achavamos que grande parte do código poderia ser feita mecanicamente, porque não
+existia grande racionio ou lógica nas funções geral XML para expressar os vários
+nós reconhecidos.
+Embora subestimado o trabalho envolvido, percebemos que precisavamos de alterar
+coisas a nível dos nós e consequentemente da gramática que numa primeira análise
+tinham escapado, melhorando a qualidade do projecto.
+Tivemos alguma dificuldade em decidir se alguns atributos dos nós seriam melhor
+representados como fazendo parte do cabeçalho da tag do nó, ou se estariam
+melhor dentro do mesmo (como por ex. o tipo de uma variável).
+Consideramos que o código para imprimir ExpressionType's não ficou o mais limpo
+possível.
+

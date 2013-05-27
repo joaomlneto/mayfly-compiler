@@ -1,0 +1,5 @@
+public integer g(integer i)
+public integer f(integer i) = 9 { if i == 0 then f = 0; else f = g(i-1) + i; }
+public integer g(integer i) = 9 { if i == 0 then g = 0; else g = f(i-1) + i; }
+public integer mayfly() = 0 { f(3)! }
+

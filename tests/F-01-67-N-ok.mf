@@ -1,0 +1,8 @@
+public integer mayfly() = 0 {
+  integer x;
+  integer y;
+  for y in 1 upto 3 do
+    for x in 1 upto 6 do
+      if y % 2 == 1 then continue; else x!
+}
+

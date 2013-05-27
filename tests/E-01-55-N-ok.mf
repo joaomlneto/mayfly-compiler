@@ -1,0 +1,5 @@
+integer x;
+public integer mayfly() = 0 {
+  for x in 1 upto 3 do x!
+}
+

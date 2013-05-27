@@ -1,0 +1,34 @@
+>> Classificador de Triângulos
+
+public integer mayfly() = 0 {
+
+  >> declaração/definição de variáveis
+
+  integer a = 0;
+  integer b = 0;
+  integer c = 0;
+
+  >> introduzir as dimensões da 3 faces do triângulo
+
+  "introduza as dimensões do primeiro lado do triângulo: "!
+  a = @;
+  "introduza as dimensões do segundo lado do triângulo: "!
+  b = @;
+  "introduza as dimensões do terceiro lado do triângulo: "!
+  c = @;
+
+  if a <= 0 | b <= 0 | c <= 0 then
+    >> faces com comprimentos não positivos
+    "As dimensões dos lados do triângulo devem ser positivas"!!
+  else
+    if a + b <= c | a + c <= b | b + c <= a then
+      "Não é um triângulo"!!
+    else
+      if a == b then
+        if b == c then "Triângulo equilátero"!!
+        else "Triângulo isósceles"!!
+      else
+        if b == c then "Triângulo isósceles"!!
+        else "Triângulo escaleno"!!
+
+}

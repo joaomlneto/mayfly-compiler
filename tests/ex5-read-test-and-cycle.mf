@@ -1,0 +1,11 @@
+>> Ciclo de impressão.
+public integer mayfly() = 0 {
+  integer m = 0;
+  integer x = 0;
+  m = @;  >> pede número
+  if m > 0 then
+    do {
+      x!!
+      x++;
+    } while x < m;
+}

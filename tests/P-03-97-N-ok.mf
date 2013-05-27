@@ -1,0 +1,16 @@
+integer *f;
+public integer mayfly() = 0 {
+  integer n = 4;
+  integer i;
+  integer j;
+  integer k;
+  integer l;
+  integer *f = 0;
+  f = #n;
+  for i in 0 upto n-1 do f[i] = 2;
+  for j in 0 upto n-1 do f[j]!
+  "\n"!
+  for k in 0 upto n-1 do f[k] = 6/f[k];
+  for l in 0 upto n-1 do f[l]!
+}
+

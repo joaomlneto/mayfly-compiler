@@ -1,0 +1,26 @@
+>> Imprime os divisores de um número
+
+public integer mayfly() = 0 {
+  integer n = 0;
+  integer d = 0;
+
+  "Cálculo dos divisores de um número."!!
+  "Introduza o número: "!
+  n = @;
+
+  if n > 0 then {
+    integer i = 2;
+    if i <= n/2 then
+      do {
+        if n % i == 0 then {
+	    i!!  >> "n" é divisível por "i"
+	    d++;
+        }
+        i++;
+      } while i <= n/2;
+
+    if d == 0 then
+      "É primo"!!		>> "n" é primo
+  }
+
+}

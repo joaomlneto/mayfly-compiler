@@ -1,0 +1,2 @@
+integer x = 0; integer y = 1; public integer mayfly() = 0 { x<>y==x! 
+}

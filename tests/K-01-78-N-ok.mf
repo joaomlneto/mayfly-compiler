@@ -1,0 +1,7 @@
+public integer x = 10;
+void f() { integer x = 3; x! }
+public integer mayfly() = 0 {
+  f();
+  x!
+}
+

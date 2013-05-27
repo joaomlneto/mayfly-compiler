@@ -1,0 +1,12 @@
+public number *main(number *p) { main = 1 + p; }
+public integer mayfly() = 0 {
+  number *p = 0;
+  number *q = 0;
+  p = #3;
+  p[0] = 3.1;
+  p[1] = 2.1;
+  p[2] = 6.1E1;
+  q = main(p);
+  q[1]!
+}
+

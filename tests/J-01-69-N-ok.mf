@@ -1,0 +1,5 @@
+void f() { "ola"! }
+public integer mayfly() = 0 {
+  f();
+}
+

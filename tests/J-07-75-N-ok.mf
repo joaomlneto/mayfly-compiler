@@ -1,0 +1,6 @@
+=< scope =>
+void f() { integer mayfly = 3; mayfly; mayfly! }
+public integer mayfly() = 0 {
+  f();
+}
+

@@ -1,0 +1,3 @@
+integer pi() { pi = 314; }
+public integer mayfly() = 0 { pi()! }
+

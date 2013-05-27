@@ -1,0 +1,6 @@
+=< duzia =>
+public integer argc()
+public integer mayfly() = 0 {
+  argc()!
+}
+

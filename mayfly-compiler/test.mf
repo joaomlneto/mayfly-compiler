@@ -1,0 +1,13 @@
+public integer mayfly() = 0 {
+	integer *q = 0;
+	number f;
+	q = #3;
+	q[0] = 888;
+	q[1] = 999;
+	q[2] = 6;
+	q[1+1]!!
+>>	f = (q+1)[1];
+>>	f = (q+1)[1] - p[1];
+>>	f!
+}
+

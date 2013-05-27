@@ -1,0 +1,6 @@
+public void f()
+public void f() { integer x = 3; x! }
+public integer mayfly() = 0 {
+  f();
+}
+

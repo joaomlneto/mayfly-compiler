@@ -1,0 +1,5 @@
+integer f() { f = 2; }
+public integer mayfly() = 0 {
+  f()!
+}
+

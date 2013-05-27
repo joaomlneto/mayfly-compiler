@@ -1,0 +1,11 @@
+number *f;
+number d = 4;
+public integer mayfly() = 0 {
+  integer i;
+  integer j;
+  f = #7;
+  for i in 0 upto 5 do f[i] = d;
+  f[i] = d*d;
+  for j in 0 upto 6 do f[j]!
+}
+

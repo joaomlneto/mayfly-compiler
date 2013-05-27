@@ -1,0 +1,1 @@
+const integer x = 10; public integer mayfly() = 0 { x! }

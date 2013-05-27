@@ -1,0 +1,3 @@
+public integer mayfly() = 0 {
+	 if 2 then "KO"! else "OK"! 
+}

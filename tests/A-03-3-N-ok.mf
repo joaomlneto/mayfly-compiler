@@ -1,0 +1,4 @@
+public integer mayfly() = 0 {
+  "\41" "\42" "C" "D"!!
+}
+

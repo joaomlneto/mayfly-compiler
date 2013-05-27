@@ -1,0 +1,1 @@
+string x = "ola"; public integer mayfly() = 0 { x! }
